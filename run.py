@@ -10,7 +10,7 @@ def welcome():
 @app.route('/hello')
 def hello_world():
     n = request.args.get('city')
-    base_url='https://api.openweathermap.org/data/2.5/weather?q={}&appid=3272cb87863583623e3e36a813b81447'
+    base_url=f"http://api.weatherstack.com/current?access_key=1ce59aaa2916843340954d6807ef368b&query={n}"
     x=requests.get(base_url.format(n)).json()
     try:
         return render_template('response.html', posts=x)
