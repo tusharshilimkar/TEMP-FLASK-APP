@@ -1,0 +1,40 @@
+html {
+  background-color: black;
+  font-size: 12px;
+}
+
+.preload * {
+-webkit-transition: none !important;
+-webkit-transform:translate3d(0,0,0);
+-webkit-backface-visibility: hidden;
+-moz-transition: none !important;
+-ms-transition: none !important;
+-o-transition: none !important;
+}
+
+body {
+  color: mediumspringgreen;
+}
+
+h1 {
+  color: lightblue;
+}
+
+p1 {
+  color: lightpink;
+  font-size: 15px;
+}
+a {
+  color: lightpink;
+  font-size: 15px;
+}
+
+
+
+html {
+ background-image: url("https://scx2.b-cdn.net/gfx/news/hires/2019/2-nature.jpg");
+ background-repeat: no-repeat;
+ -webkit-transition: background-image 1s ease-in-out;
+ transition: background-image 1s ease-in-out;
+}
+

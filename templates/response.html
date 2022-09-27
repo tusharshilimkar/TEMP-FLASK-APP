@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body class="preload">
+<link rel="stylesheet" href="{{ url_for('static', filename='main.css')}}">
+<a href="./"><h1>Home</h1></a>
+<h1>Current Weather Parameters : - </h1>
+<h1>Weather Parameters for {{posts.name}}</h1>
+<h1>Temperature : {{ posts.main.temp }} Kelvin <h1>
+<h1>Pressure : {{ posts.main.pressure }} mbar <h1>
+<h1>Country : {{ posts.sys.country }}</h1>
+<h1>Co-ordinates : long - {{ posts.coord.lon }} lat - {{ posts.coord.lat}}</h1>
+<h1>Wind Speed: {{ posts.wind.speed }} km/hr</h1>
+{% for post in posts.weather %}
+	<h1> Weather : {{ post.main }}</h1>
+	<h1> Description : {{ post.main }}</h1>
+{% endfor %}
+<a href="/hello?city=pune"><p1>Pune<p1><a>
+<a href="/hello?city=mumbai"><p1>Mumbai</p1></a>
+<a href="/hello?city=delhi"><p1>Delhi</p1></a>
+<a href="/hello?city=Bangalore"><p1>Bangalore</p1></a>
+<a href="/hello?city=kolkata"><p1>kolkata</p1></a>
+</body>
+</html>
+
